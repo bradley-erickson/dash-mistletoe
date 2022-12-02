@@ -1,10 +1,10 @@
-from dash import dash, html, dcc
+from dash import Dash, html, dcc
 from dash_mistletoe.dash_renderer import DashRenderer
 import mistletoe
 from mistletoe import span_token, block_token
 from typing import Union
 
-app = dash(__name__)
+app = Dash(__name__)
 
 markdown_to_render = """
 # Heading level 1
@@ -37,7 +37,7 @@ class MyDashRenderer(DashRenderer):
         Then we return our own predefined component with a new style
         '''
         children = self.render_inner(token)
-        return html.Strong(children, style={'color': 'red'})
+        return html.Strong(children, style={'color': 'blue '})
 
     def render_quote(self, token: block_token.Quote) -> html.Blockquote:
         '''Render a markdown quote

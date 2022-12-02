@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='dash_mistletoe',
-    version='0.2.0',
+    version='0.2.1',
     author='Bradley Erickson',
     author_email='bbwe24@gmail.com',
     license='MIT',
